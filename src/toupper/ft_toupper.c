@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int	ft_toupper(int chr)
+int	ft_toupper(int c)
 {
-	if(chr >= 97 && chr <= 122)
-		chr = chr - 32;
-	return chr;
+	if(c >= 97 && c <= 122)
+		c = c - 32;
+	return c;
 }
 
 int	main(void)

@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int     ft_tolower(int chr)
+int     ft_tolower(int c)
 {
-        if(chr >= 65 && chr <= 90)
-                chr = chr + 32;
-        return chr;
+        if(c >= 65 && c <= 90)
+                c = c + 32;
+        return c;
 }
 
 int     main(void)

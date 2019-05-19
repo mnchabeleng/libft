@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 
-char	*ft_strncat(char *dest, const char *str, size_t n)
+char	*ft_strncat(char *dest, const char *src, size_t n)
 {
 	size_t dest_len;
 	size_t i;
@@ -11,9 +11,9 @@ char	*ft_strncat(char *dest, const char *str, size_t n)
 		i++;
 	dest_len = i;
 	i = 0;
-	while(i < n && str[i] != '\0')
+	while(i < n && src[i] != '\0')
 	{
-		dest[dest_len + i] = str[i];
+		dest[dest_len + i] = src[i];
 		i++;
 	}
 	dest[dest_len + i] = '\0';
