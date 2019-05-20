@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 
-void	*ft_memmove(void *dest, void *src, int n)
+void	*ft_memmove(void *dest, void *src, int len)
 {
 	unsigned char *ft_dest;
 	unsigned char *ft_src;
@@ -13,7 +13,7 @@ void	*ft_memmove(void *dest, void *src, int n)
 		return dest;
 	if(ft_dest > ft_src)
 	{
-		i = n - 1;
+		i = len - 1;
 		while(i >= 0)
 		{
 			ft_dest[i] = ft_src[i];
@@ -24,10 +24,10 @@ void	*ft_memmove(void *dest, void *src, int n)
 	{
 		/* memcpy */	
 		i = 0;
-		while(i < n)
+		while(i < len)
 		{
 			ft_dest[i] = ft_src[i];
-			i++;
+		i++;
 		}
 	}
 	return ft_dest;
