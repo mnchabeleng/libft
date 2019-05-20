@@ -5,9 +5,9 @@
 - void	*ft_memset(void *s, int c, int n);
 - void	ft_bzero(void *s, int n);
 - void	*ft_memcpy(void *dest, const void *src, int n);
-- ft_memccpy
-- ft_memmove
-- ft_memchr
+- void	*ft_memccpy(void *dest, const void *src, int c, int n);
+- void	*ft_memmove(void *dest, const void *src, int n);
+- void	*ft_memchr(const void *s, int c, int n);
 - ft_memcmp
 - int	ft_strlen(const char *s);
 - char	*ft_strdup(const char *s);
@@ -22,7 +22,7 @@
 - ft_strnstr
 - int	ft_strcmp(const char *s1, const char *s2);
 - int	ft_strncmp(const char *s1, const char *s2, int n);
-- int	ft_atoi(const char *nptr)
+- int	ft_atoi(const char *nptr);
 - ft_isalpha
 - ft_isdigit
 - ft_isalnum
