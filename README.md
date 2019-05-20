@@ -6,7 +6,7 @@
 - void	ft_bzero(void *s, int n);
 - void	*ft_memcpy(void *dest, const void *src, int n);
 - void	*ft_memccpy(void *dest, const void *src, int c, int n);
-- ft_memmove
+- void	*ft_memmove(void *dest, const void *src, int n);
 - ft_memchr
 - ft_memcmp
 - int	ft_strlen(const char *s);

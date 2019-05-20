@@ -3,21 +3,21 @@
 
 void	*ft_memccpy(void *dest, const void *src, int c,int n)
 {
-	unsigned char *str_dest;
-	unsigned char *str_src;
+	unsigned char *ft_dest;
+	unsigned char *ft_src;
 	int i;
 
-	str_dest = (unsigned char *)dest;
-	str_src = (unsigned char *)src;
+	ft_dest = (unsigned char *)dest;
+	ft_src = (unsigned char *)src;
 	i = 0;
 	while(i < n)
 	{
-		str_dest[i] = str_src[i];
-		if(str_src[i] == (unsigned char)c)
-			return (str_dest + i + 1);
+		ft_dest[i] = ft_src[i];
+		if(ft_src[i] == (unsigned char)c)
+			return (ft_dest + i + 1);
 		i++;
 	}
-	return str_dest;
+	return ft_dest;
 }
 
 int	main(void)
