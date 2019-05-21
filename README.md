@@ -18,7 +18,7 @@
 - ft_strlcat
 - char	*ft_strchr(const char *s, int c);
 - char	*ft_strrchr(const char *s, int c);
-- ft_strstr
+- char	*ft_strstr(const char * haystack, const char needle);
 - ft_strnstr
 - int	ft_strcmp(const char *s1, const char *s2);
 - int	ft_strncmp(const char *s1, const char *s2, int n);
