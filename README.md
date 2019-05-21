@@ -8,7 +8,7 @@
 - void	*ft_memccpy(void *dest, const void *src, int c, int n);
 - void	*ft_memmove(void *dest, const void *src, int n);
 - void	*ft_memchr(const void *s, int c, int n);
-- ft_memcmp
+- int	ft_memcmp(const void *s1, const void *s2, int n);
 - int	ft_strlen(const char *s);
 - char	*ft_strdup(const char *s);
 - char	*ft_strcpy(char *dest, const char *src);
