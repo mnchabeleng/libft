@@ -16,7 +16,7 @@
 - char	*ft_strcat(char *dest, const char *src);
 - char	*ft_strncat(char *dest, const char *src, int n);
 - ft_strlcat
-- ft_strchr
+- char	*ft_strchr(const char *s, int c);
 - ft_strrchr
 - ft_strstr
 - ft_strnstr
