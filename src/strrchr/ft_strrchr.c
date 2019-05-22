@@ -3,20 +3,20 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned char *ft_s;
-	int i;
+	char	*ft_s;
+	int		i;
 
-	ft_s = (unsigned char *)s;
+	ft_s = (char *)s;
 	i = 0;
-	while(ft_s[i] != '\0')
+	while (ft_s[i] != '\0')
 		i++;
-	while(i >= 0)
+	while (i >= 0)
 	{
-		if(ft_s[i] == c)
+		if (ft_s[i] == c)
 			return (ft_s + i);
 		i--;
 	}
-	return 0;
+	return (0);
 }
 
 int	main(void)

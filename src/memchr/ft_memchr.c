@@ -3,20 +3,20 @@
 
 void	*ft_memchr(const void *s, int c, int n)
 {
-	unsigned char *ft_s;
-	unsigned char ft_c;
-	int i;
+	unsigned char	*ft_s;
+	unsigned char	ft_c;
+	int				i;
 
 	ft_s = (unsigned char *)s;
 	ft_c = (unsigned char)c;
 	i = 0;
-	while(i < n)
+	while (i < n)
 	{
-		if(ft_s[i] == ft_c)
+		if (ft_s[i] == ft_c)
 			return (ft_s + i);
 		i++;
 	}
-	return 0;
+	return (0);
 }
 
 int		main(void)

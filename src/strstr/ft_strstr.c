@@ -5,17 +5,17 @@ char	*ft_strstr(const char *haystack, const char *needle)
 {
 	int i;
 	int j;
-
+	
 	i = 0;
-	if(needle[i] == '\0')
-		return (unsigned char *)haystack;
-	while(haystack[i] != '\0')
+	if (needle[i] == '\0')
+		return (char *)haystack;
+	while (haystack[i] != '\0')
 	{
 		j = 0;
 		while(haystack[i + j] == needle[j])
 		{
 			if(needle[i] == '\0')
-				return ((unsigned char *)haystack + i);
+				return ((char *)haystack + i);
 			j++;
 		}
 		i++;
@@ -25,8 +25,8 @@ char	*ft_strstr(const char *haystack, const char *needle)
 
 int	main(void)
 {
-	const char haystack[50] = "TutorialsPointTutorials";
-	const char needle[10] = "Point";
+	const char haystack[50] = "HelloWolrdHelloWorldHello";
+	const char needle[10] = "World";
 
 	//strstr
 	printf("strstr : %s\n", strstr(haystack, needle));

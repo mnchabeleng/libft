@@ -3,18 +3,18 @@
 
 void	*ft_memmove(void *dest, void *src, int len)
 {
-	unsigned char *ft_dest;
-	unsigned char *ft_src;
-	int i;
+	unsigned char	*ft_dest;
+	unsigned char 	*ft_src;
+	int				i;
 
 	ft_dest = (unsigned char *)dest;
 	ft_src = (unsigned char *)src;
-	if(ft_dest == ft_src)
-		return dest;
-	if(ft_dest > ft_src)
+	if (ft_dest == ft_src)
+		return ((unsigned char *)dest);
+	if (ft_dest > ft_src)
 	{
 		i = len - 1;
-		while(i >= 0)
+		while (i >= 0)
 		{
 			ft_dest[i] = ft_src[i];
 			i--;
@@ -24,13 +24,13 @@ void	*ft_memmove(void *dest, void *src, int len)
 	{
 		/* memcpy */	
 		i = 0;
-		while(i < len)
+		while (i < len)
 		{
 			ft_dest[i] = ft_src[i];
 			i++;
 		}
 	}
-	return ft_dest;
+	return (ft_dest);
 }
 
 int	main(void)

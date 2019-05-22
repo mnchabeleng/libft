@@ -3,7 +3,7 @@
 
 int	ft_is_digit(char chr)
 {
-	if(chr >= '0' && chr <= '9')
+	if (chr >= '0' && chr <= '9')
 		return (1);
 	return (0);
 }
@@ -17,13 +17,13 @@ int	ft_atoi(const char *nptr)
 	res = 0;
 	sign = 1;
 	i = 0;
-	while((nptr[i] >= '\t' && nptr[i] <= '\r') || nptr[i] == ' ')
+	while ((nptr[i] >= '\t' && nptr[i] <= '\r') || nptr[i] == ' ')
 		i++;
-	if(nptr[i] == '-')
+	if (nptr[i] == '-')
 		sign = -1;
-	if(nptr[i] == '-' || nptr[i] == '+')
+	if (nptr[i] == '-' || nptr[i] == '+')
 		i++;
-	while(nptr[i] != '\0' && ft_is_digit(nptr[i]))
+	while (nptr[i] != '\0' && ft_is_digit(nptr[i]))
 	{
 		res = res * 10 + nptr[i] - '0';
 		i++;

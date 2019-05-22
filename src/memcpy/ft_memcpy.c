@@ -3,19 +3,19 @@
 
 void	*ft_memcpy(void *dest, const void *src, int n)
 {
-	unsigned char *str_dest;
-	unsigned char *str_src;
-	int i;
+	unsigned char	*str_dest;
+	unsigned char	*str_src;
+	int				i;
 
 	str_dest = (unsigned char *)dest;
 	str_src = (unsigned char *)src;
 	i = 0;
-	while(i < n)
+	while (i < n)
 	{
 		str_dest[i] = str_src[i];
 		i++;
 	}
-	return str_dest;
+	return (str_dest);
 }
 
 int	main(void)

@@ -1,23 +1,23 @@
 #include <string.h>
 #include <stdio.h>
 
-void	*ft_memccpy(void *dest, const void *src, int c,int n)
+void	*ft_memccpy(void *dest, const void *src, int c, int n)
 {
-	unsigned char *ft_dest;
-	unsigned char *ft_src;
-	int i;
+	unsigned char	*ft_dest;
+	unsigned char	*ft_src;
+	int				i;
 
 	ft_dest = (unsigned char *)dest;
 	ft_src = (unsigned char *)src;
 	i = 0;
-	while(i < n)
+	while (i < n)
 	{
 		ft_dest[i] = ft_src[i];
-		if(ft_src[i] == (unsigned char)c)
+		if (ft_src[i] == (unsigned char)c)
 			return (ft_dest + i + 1);
 		i++;
 	}
-	return ft_dest;
+	return (ft_dest);
 }
 
 int	main(void)
