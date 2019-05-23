@@ -11,7 +11,7 @@ unsigned int	ft_strlen(const char *s)
 	return (i);
 }
 
-int	ft_strncmp(const char *s1, const char *s2, int n)
+int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {
 	if (s1 && s2)
 	{
@@ -46,7 +46,7 @@ char	*ft_strstr(const char *haystack, const char *needle)
 int	main(void)
 {
 	const char haystack[50] = "Red Dead Redemption Red Dead Redemption";
-	const char needle[10] = "Redemption";
+	const char needle[25] = "Red emption";
 
 	//strstr
 	printf("strstr : %s\n", strstr(haystack, needle));
