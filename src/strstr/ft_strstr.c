@@ -1,52 +1,32 @@
 #include <string.h>
 #include <stdio.h>
 
-unsigned int	ft_strlen(const char *s)
+char *ft_strstr(const char *haystack, const char *needle)
 {
-	unsigned int i;
+	int i;
+	int j;
 
 	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
-{
-	if (s1 && s2)
-	{
-		if (n == 0)
-			return (0);
-		while (--n && *s1 && *s2 && *s1 == *s2)
-		{
-			s1++;
-			s2++;
-		}
-		return ((unsigned char)*s1 - (unsigned char)*s2);
-	}
-	return (-1);
-}
-
-char	*ft_strstr(const char *haystack, const char *needle)
-{
-	unsigned int	len;
-
-	len = ft_strlen(needle);
-	if (len == 0)
+	if (needle[i] == '\0')
 		return ((char *)haystack);
-	while (*haystack)
+	while (haystack[i] != '\0')
 	{
-		if (ft_strncmp(haystack, needle, len) == 0)
-			return ((char *)haystack);
-		haystack++;
+		j = 0;
+		while (haystack[i + j] == needle[j])
+		{
+			j++;
+			if (needle[j] == '\0')
+				return ((char *)haystack + i);
+		}
+		i++;
 	}
-	return (0);
+	return ((char *)0);
 }
 
 int	main(void)
 {
 	const char haystack[50] = "Red Dead Redemption Red Dead Redemption";
-	const char needle[25] = "Red emption";
+	const char needle[25] = "Dead";
 
 	//strstr
 	printf("strstr : %s\n", strstr(haystack, needle));
