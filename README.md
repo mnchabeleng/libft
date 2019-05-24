@@ -25,7 +25,7 @@
 - int	ft_atoi(const char *nptr);
 - int	ft_isalpha(int c);
 - int	ft_isdigit(int c);
-- ft_isalnum
+- int	ft_isalnum(int c);
 - ft_isascii
 - ft_isprint
 - int	ft_toupper(int c);
