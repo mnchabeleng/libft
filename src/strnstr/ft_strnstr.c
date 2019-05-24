@@ -28,7 +28,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, unsigned int n)
 int	main(void)
 {
 	const char haystack[50] = "Red Dead Redemption";
-	const char needle[25] = "Dead";
+	const char needle[25] = "Red";
 
 	//strstr
 	printf("strnstr : %s\n", strnstr(haystack, needle, 0));
