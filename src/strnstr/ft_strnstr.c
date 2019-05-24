@@ -1,9 +1,9 @@
 #include <string.h>
 #include <stdio.h>
 
-unsigned int	ft_strlen(const char *s)
+int		ft_strlen(const char *s)
 {
-	unsigned int i;
+	int i;
 
 	i = 0;
 	while (s[i])
@@ -11,54 +11,30 @@ unsigned int	ft_strlen(const char *s)
 	return (i);
 }
 
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
+char	*ft_strnstr(const char *haystack, const char *needle, int n)
 {
-	if (s1 && s2)
-	{
-		if (n == 0)
-			return (0);
-		while (--n && *s1 && *s2 && *s1 == *s2)
-		{
-			s1++;
-			s2++;
-		}
-		return ((unsigned char)*s1 - (unsigned char)*s2);
-	}
-	return (-1);
-}
+	int i;
+	int j;
+	int len;
 
-char	*ft_strstr(const char *haystack, const char *needle)
-{
-	unsigned int	len;
-
+	i = 0;
 	len = ft_strlen(needle);
-	if (len == 0)
-		return ((char *)haystack);
-	while (*haystack)
-	{
-		if (ft_strncmp(haystack, needle, len) == 0)
-			return ((char *)haystack);
-		haystack++;
-	}
-	return (0);
-}
-
-char	*ft_strnstr(const char *haystack, const char *needle, unsigned int n)
-{
-	unsigned int len;
-
-	len = ft_strlen(needle);
-	if (len == 0)
-		return ((char *)haystack);
 	if (len > n)
-		return (0);
-	while (n-- && *haystack)
+		return ((char *)0);
+	if(needle[i] == '\0')
+		return ((char *)haystack);
+	while (haystack[i] != '\0')
 	{
-		if (ft_strncmp(haystack, needle, len) == 0)
-			return (char *)haystack;
-		haystack++;
+		j = 0;
+		while (haystack[i + j] == needle[j] && i < n)
+		{
+			j++;
+			if (needle[j] == '\0')
+				return ((char *)haystack + i);
+		}
+		i++;
 	}
-	return (0);
+	return ((char *)0);
 }
 
 int	main(void)
@@ -67,7 +43,7 @@ int	main(void)
 	const char needle[25] = "Dead";
 
 	//strstr
-	printf("strstr : %s\n", strstr(haystack, needle));
+	printf("strnstr : %s\n", strnstr(haystack, needle, 5));
 	//ft_strstr
 	printf("ft_strnstr : %s\n", ft_strnstr(haystack, needle, 5));
 	return (0);
