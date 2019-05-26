@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 
-char	*ft_strcat(char *dest, const char *src)
+char	*ft_strlcat(char *dest, const char *src, int n)
 {
 	int dest_len;
 	int i;
@@ -25,13 +25,13 @@ int	main(void)
 	char dest[20];
 	char str[20];
 
-	strcpy(dest, "Destination");
-	strcpy(str, "String");
-	strcat(dest, str);
-	printf("strcat : %s\n", dest);
-	strcpy(dest, "FT_Destination");
-	strcpy(str, "FT_String");
-	ft_strcat(dest, str);
-	printf("ft_strcat : %s\n", dest);
+        strcpy(dest, "Destination");
+        strcpy(str, "String");
+        strlcat(dest, str, 2);
+        printf("strlcat : %s\n", dest);
+        strcpy(dest, "FT_Destination");
+        strcpy(str, "FT_String");
+        //ft_strcat(dest, str);
+        //printf("ft_strcat : %s\n", dest);
 	return (0);
 }
