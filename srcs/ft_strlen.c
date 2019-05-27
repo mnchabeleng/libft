@@ -6,11 +6,13 @@
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:21:02 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/05/27 13:43:33 by mnchabel         ###   ########.fr       */
+/*   Updated: 2019/05/27 15:30:45 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlen(char *s)
+#include "../headers/libft.h"
+
+size_t	ft_strlen(const char *s)
 {
 	size_t i;
 

@@ -6,9 +6,11 @@
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 11:02:49 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/05/27 13:47:30 by mnchabel         ###   ########.fr       */
+/*   Updated: 2019/05/27 15:07:56 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../headers/libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

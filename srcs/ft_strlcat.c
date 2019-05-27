@@ -6,9 +6,11 @@
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:50:16 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/05/27 13:42:47 by mnchabel         ###   ########.fr       */
+/*   Updated: 2019/05/27 15:17:52 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../headers/libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t n)
 {

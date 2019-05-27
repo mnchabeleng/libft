@@ -6,9 +6,11 @@
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:54:33 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/05/27 13:49:41 by mnchabel         ###   ########.fr       */
+/*   Updated: 2019/05/27 15:11:00 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../headers/libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

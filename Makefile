@@ -6,7 +6,7 @@
 #    By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/27 14:11:21 by mnchabel          #+#    #+#              #
-#    Updated: 2019/05/27 14:18:21 by mnchabel         ###   ########.fr        #
+#    Updated: 2019/05/27 15:13:41 by mnchabel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ OUT = ft_atoi.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_memchr.o \
 LIB = libft.a
 
 all:
-	gcc -c -Wall -Weeror -Wextra $(SRC)
+	gcc -c -Wall -Werror -Wextra $(SRC)
 	ar -cvq $(LIB) $(OUT)
 
 clean:
