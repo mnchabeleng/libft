@@ -6,12 +6,9 @@
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 11:38:22 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/05/27 11:38:23 by mnchabel         ###   ########.fr       */
+/*   Updated: 2019/05/27 13:48:55 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <string.h>
-#include <stdio.h>
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
@@ -35,16 +32,4 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 		i++;
 	}
 	return ((char *)0);
-}
-
-int	main(void)
-{
-	const char haystack[50] = "Red Dead Redemption";
-	const char needle[25] = "Red";
-
-	//strstr
-	printf("strnstr : %s\n", strnstr(haystack, needle, 0));
-	//ft_strstr
-	printf("ft_strnstr : %s\n", ft_strnstr(haystack, needle, 0));
-	return (0);
 }

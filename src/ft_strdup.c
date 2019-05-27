@@ -6,13 +6,9 @@
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 11:35:39 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/05/27 11:35:41 by mnchabel         ###   ########.fr       */
+/*   Updated: 2019/05/27 13:42:12 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 
 char	*ft_strdup(const char *s)
 {
@@ -29,20 +25,4 @@ char	*ft_strdup(const char *s)
 		i--;
 	}
 	return (dest);
-}
-
-int	main(void)
-{
-	char *str1;
-	char *str2;
-	char *str3;
-	char *str4;
-
-	str1 = "Hello Africa!";
-	str2 = ft_strdup(str1);
-	printf("ft_strdup | str1 : %p -> %s, str2 : %p -> %s\n", (void *)str1, str1, (void *)str2, str2);
-	str3 = "Hello World!";
-	str4 = strdup(str3);
-	printf("strdup | str3 : %p -> %s, str4 : %p -> %s\n", (void *)str3, str3, (void *)str4, str4);
-	return (0);
 }

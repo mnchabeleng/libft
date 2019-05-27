@@ -6,12 +6,9 @@
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:44:07 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/05/27 10:44:10 by mnchabel         ###   ########.fr       */
+/*   Updated: 2019/05/27 13:45:17 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <string.h>
-#include <stdio.h>
 
 char	*ft_strncat(char *dest, const char *src, size_t n)
 {
@@ -30,20 +27,4 @@ char	*ft_strncat(char *dest, const char *src, size_t n)
 	}
 	dest[dest_len + i] = '\0';
 	return (dest);
-}
-
-int	main(void)
-{
-	char dest[20];
-	char str[20];
-
-	strcpy(dest, "Destination");
-	strcpy(str, "String");
-	strncat(dest, str, 3);
-	printf("strncat : %s\n", dest);
-	strcpy(dest, "FT_Destination");
-	strcpy(str, "FT_String");
-	ft_strncat(dest, str, 9);
-	printf("ft_strncat : %s\n", dest);
-	return (0);
 }
