@@ -15,7 +15,7 @@
 - char	*ft_strncpy(char *dest, const char *src, int n);
 - char	*ft_strcat(char *dest, const char *src);
 - char	*ft_strncat(char *dest, const char *src, int n);
-- ft_strlcat
+- int	ft_strlcat(char *dest, char *src, int n);
 - char	*ft_strchr(const char *s, int c);
 - char	*ft_strrchr(const char *s, int c);
 - char	*ft_strstr(const char * haystack, const char needle);
