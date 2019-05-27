@@ -2,7 +2,7 @@
 
 #### Re-code a set of the libc functions, as defined in their man. Functions present the same prototype and behaviors as the originals. Function names are prefixed by “ft_”. For instance "strlen" becomes "ft_strlen".
 
-#### Part 1 - Libc functions
+### Part 1 - Libc functions
 
 - void	*ft_memset(void *s, int c, int n);
 - void	ft_bzero(void *s, int n);
@@ -33,4 +33,4 @@
 - int	ft_toupper(int c);
 - int	ft_tolower(int c);
 
-#### Part 2 - Additional functions
+### Part 2 - Additional functions
