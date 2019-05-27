@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/27 11:33:01 by mnchabel          #+#    #+#             */
+/*   Updated: 2019/05/27 11:33:03 by mnchabel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <string.h>
 #include <stdio.h>
 
-void	*ft_memchr(const void *s, int c, int n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*ft_s;
 	unsigned char	ft_c;
-	int				i;
+	size_t			i;
 
 	ft_s = (unsigned char *)s;
 	ft_c = (unsigned char)c;

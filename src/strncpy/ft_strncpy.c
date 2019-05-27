@@ -1,12 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/27 11:37:50 by mnchabel          #+#    #+#             */
+/*   Updated: 2019/05/27 11:37:54 by mnchabel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <string.h>
 #include <stdio.h>
 
-char	*ft_strncpy(char *dest, char *src, int n)
+char	*ft_strncpy(char *dest, char *src, size_t n)
 {
-	int i;
+	size_t i;
 
 	i = 0;
-	while (i < n && src[i] != '\0')
+	while (i < n && src[i])
 	{
 		dest[i] = src[i];
 		i++;

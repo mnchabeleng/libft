@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/27 11:31:32 by mnchabel          #+#    #+#             */
+/*   Updated: 2019/05/27 11:31:34 by mnchabel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <string.h>
 #include <stdio.h>
 
-void	*ft_memccpy(void *dest, const void *src, int c, int n)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	unsigned char	*ft_dest;
 	unsigned char	*ft_src;
-	int				i;
+	size_t			i;
 
 	ft_dest = (unsigned char *)dest;
 	ft_src = (unsigned char *)src;

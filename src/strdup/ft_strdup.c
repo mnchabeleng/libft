@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/27 11:35:39 by mnchabel          #+#    #+#             */
+/*   Updated: 2019/05/27 11:35:41 by mnchabel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -8,7 +20,7 @@ char	*ft_strdup(const char *s)
 	int		i;
 
 	i = 1;
-	while (s[i] != '\0')
+	while (s[i])
 		i++;
 	dest = (char *)malloc(sizeof(char) * i);
 	while (i >= 0)

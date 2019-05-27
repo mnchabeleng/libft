@@ -10,5 +10,10 @@
 
 #ifndef	FT_MEMSET
 #define	FT_MEMSET
-	void    *ft_memset(void *str, char chr, int n);
+	void    *ft_memset(void *str, char chr, size_t n);
+#endif
+
+#ifndef FT_BZERO
+#define FT_BZERO
+	
 #endif
