@@ -51,7 +51,7 @@
 - ft_strtrim
 - ft_strsplit
 - ft_itoa
-- ft_putchar
+- int		ft_putchar(int c);
 - ft_putstr
 - ft_putendl
 - ft_putnbr
