@@ -51,8 +51,8 @@
 - ft_strtrim
 - ft_strsplit
 - ft_itoa
-- int		ft_putchar(int c);
-- ft_putstr
+- void		ft_putchar(int c);
+- void		ft_putstr(char const *s);
 - ft_putendl
 - ft_putnbr
 - ft_putchar_fd
