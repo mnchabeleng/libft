@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 11:31:32 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/05/27 14:47:56 by mnchabel         ###   ########.fr       */
+/*   Created: 2019/05/27 10:18:02 by mnchabel          #+#    #+#             */
+/*   Updated: 2019/05/27 15:57:24 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/libft.h"
+#include "../../headers/libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char	*ft_dest;
-	unsigned char	*ft_src;
+	unsigned char	*ft_s1;
+	unsigned char	*ft_s2;
 	size_t			i;
 
-	ft_dest = (unsigned char *)dest;
-	ft_src = (unsigned char *)src;
+	if (s1 == s2 || n == 0 || (!s1 && !s2 && !n))
+		return (0);
+	ft_s1 = (unsigned char *)s1;
+	ft_s2 = (unsigned char *)s2;
 	i = 0;
-	while (i < n)
-	{
-		ft_dest[i] = ft_src[i];
-		if (ft_src[i] == (unsigned char)c)
-			return (ft_dest + i + 1);
+	while (ft_s1[i] && ft_s2[i] && ft_s1[i] == ft_s2[i] && i < n)
 		i++;
-	}
-	return (ft_dest);
+	return (ft_s1[i] - ft_s2[i]);
 }

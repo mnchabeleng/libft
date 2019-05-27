@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 10:54:33 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/05/27 15:11:00 by mnchabel         ###   ########.fr       */
+/*   Created: 2019/05/27 10:54:55 by mnchabel          #+#    #+#             */
+/*   Updated: 2019/05/27 16:03:41 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/libft.h"
+#include "../../headers/libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	char	*ft_s;
-	size_t	i;
+	size_t i;
+	size_t j;
 
-	ft_s = (char *)s;
 	i = 0;
-	while (ft_s[i])
-		i++;
-	while (i >= 0)
+	if (needle[i])
+		return ((char *)haystack);
+	while (haystack[i])
 	{
-		if (ft_s[i] == c)
-			return (ft_s + i);
-		i--;
+		j = 0;
+		while (haystack[i + j] == needle[j])
+		{
+			j++;
+			if (needle[j] == '\0')
+				return ((char *)haystack + i);
+		}
+		i++;
 	}
-	return (0);
+	return ((char *)0);
 }

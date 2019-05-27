@@ -6,16 +6,16 @@
 #    By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/27 14:11:21 by mnchabel          #+#    #+#              #
-#    Updated: 2019/05/27 15:13:41 by mnchabel         ###   ########.fr        #
+#    Updated: 2019/05/27 15:53:40 by mnchabel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = srcs/ft_atoi.c srcs/ft_isalnum.c srcs/ft_isascii.c srcs/ft_isprint.c srcs/ft_memchr.c \
-	srcs/ft_memcpy.c srcs/ft_memset.c srcs/ft_strchr.c srcs/ft_strcpy.c srcs/ft_strlcat.c \
-	srcs/ft_strncat.c srcs/ft_strncpy.c srcs/ft_strrchr.c srcs/ft_tolower.c srcs/ft_bzero.c \
-	srcs/ft_isalpha.c srcs/ft_isdigit.c srcs/ft_memccpy.c srcs/ft_memcmp.c srcs/ft_memmove.c \
-	srcs/ft_strcat.c srcs/ft_strcmp.c srcs/ft_strdup.c srcs/ft_strlen.c srcs/ft_strncmp.c \
-	srcs/ft_strnstr.c srcs/ft_strstr.c srcs/ft_toupper.c
+SRC = srcs/01/ft_atoi.c srcs/01/ft_isalnum.c srcs/01/ft_isascii.c srcs/01/ft_isprint.c srcs/01/ft_memchr.c \
+	srcs/01/ft_memcpy.c srcs/01/ft_memset.c srcs/01/ft_strchr.c srcs/01/ft_strcpy.c srcs/01/ft_strlcat.c \
+	srcs/01/ft_strncat.c srcs/01/ft_strncpy.c srcs/01/ft_strrchr.c srcs/01/ft_tolower.c srcs/01/ft_bzero.c \
+	srcs/01/ft_isalpha.c srcs/01/ft_isdigit.c srcs/01/ft_memccpy.c srcs/01/ft_memcmp.c srcs/01/ft_memmove.c \
+	srcs/01/ft_strcat.c srcs/01/ft_strcmp.c srcs/01/ft_strdup.c srcs/01/ft_strlen.c srcs/01/ft_strncmp.c \
+	srcs/01/ft_strnstr.c srcs/01/ft_strstr.c srcs/01/ft_toupper.c
 
 OUT = ft_atoi.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_memchr.o \
 	ft_memcpy.o ft_memset.o ft_strchr.o ft_strcpy.o ft_strlcat.o \

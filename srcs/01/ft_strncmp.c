@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 10:21:02 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/05/27 15:30:45 by mnchabel         ###   ########.fr       */
+/*   Created: 2019/05/27 11:02:49 by mnchabel          #+#    #+#             */
+/*   Updated: 2019/05/27 16:02:15 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/libft.h"
+#include "../../headers/libft.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t i;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	if (s1 && s2)
+	{
+		i = 0;
+		while (--n && s1[i] && s2[i] && s1[i] == s2[i])
+			i++;
+		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	}
+	return (-1);
 }

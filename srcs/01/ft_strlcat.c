@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 10:44:07 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/05/27 15:07:10 by mnchabel         ###   ########.fr       */
+/*   Created: 2019/05/27 10:50:16 by mnchabel          #+#    #+#             */
+/*   Updated: 2019/05/27 16:01:01 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/libft.h"
+#include "../../headers/libft.h"
 
-char	*ft_strncat(char *dest, const char *src, size_t n)
+size_t	ft_strlcat(char *dest, const char *src, size_t n)
 {
-	size_t dest_len;
+	size_t len;
 	size_t i;
 
 	i = 0;
-	while (dest[i] != '\0')
+	while (dest[i])
 		i++;
-	dest_len = i;
+	len = i;
 	i = 0;
-	while (i < n && src[i] != '\0')
+	while (src[i] && (len + i < n - 1))
 	{
-		dest[dest_len + i] = src[i];
+		dest[len + i] = src[i];
 		i++;
 	}
-	dest[dest_len + i] = '\0';
-	return (dest);
+	dest[len + i] = '\0';
+	return (len + i);
 }

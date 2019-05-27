@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 10:29:43 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/05/27 15:02:17 by mnchabel         ###   ########.fr       */
+/*   Created: 2019/05/27 10:44:07 by mnchabel          #+#    #+#             */
+/*   Updated: 2019/05/27 16:01:47 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/libft.h"
+#include "../../headers/libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+char	*ft_strncat(char *dest, const char *src, size_t n)
 {
+	size_t dest_len;
 	size_t i;
 
 	i = 0;
-	while (src[i])
+	while (dest[i] != '\0')
+		i++;
+	dest_len = i;
+	i = 0;
+	while (i < n && src[i] != '\0')
 	{
-		dest[i] = src[i];
+		dest[dest_len + i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	dest[dest_len + i] = '\0';
 	return (dest);
 }

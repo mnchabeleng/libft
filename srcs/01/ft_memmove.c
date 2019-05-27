@@ -1,30 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 11:33:34 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/05/27 14:53:36 by mnchabel         ###   ########.fr       */
+/*   Created: 2019/05/27 11:33:49 by mnchabel          #+#    #+#             */
+/*   Updated: 2019/05/27 15:58:05 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/libft.h"
+#include "../../headers/libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t len)
 {
-	unsigned char	*str_dest;
-	unsigned char	*str_src;
+	unsigned char	*ft_dest;
+	unsigned char	*ft_src;
 	size_t			i;
 
-	str_dest = (unsigned char *)dest;
-	str_src = (unsigned char *)src;
-	i = 0;
-	while (i < n)
+	ft_dest = (unsigned char *)dest;
+	ft_src = (unsigned char *)src;
+	if (ft_dest == ft_src)
+		return ((unsigned char *)dest);
+	if (ft_dest > ft_src)
 	{
-		str_dest[i] = str_src[i];
-		i++;
+		i = len - 1;
+		while (i >= 0)
+		{
+			ft_dest[i] = ft_src[i];
+			i--;
+		}
 	}
-	return (str_dest);
+	else
+	{
+		ft_memcpy(ft_dest, ft_src, len);
+	}
+	return (ft_dest);
 }

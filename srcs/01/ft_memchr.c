@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 11:35:39 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/05/27 15:03:35 by mnchabel         ###   ########.fr       */
+/*   Created: 2019/05/27 11:33:01 by mnchabel          #+#    #+#             */
+/*   Updated: 2019/05/27 15:56:58 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/libft.h"
+#include "../../headers/libft.h"
 
-char	*ft_strdup(const char *s)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*dest;
-	size_t	i;
+	unsigned char	*ft_s;
+	unsigned char	ft_c;
+	size_t			i;
 
-	i = 1;
-	while (s[i])
-		i++;
-	dest = (char *)malloc(sizeof(char) * i);
-	while (i >= 0)
+	ft_s = (unsigned char *)s;
+	ft_c = (unsigned char)c;
+	i = 0;
+	while (i < n)
 	{
-		dest[i] = s[i];
-		i--;
+		if (ft_s[i] == ft_c)
+			return (ft_s + i);
+		i++;
 	}
-	return (dest);
+	return (0);
 }

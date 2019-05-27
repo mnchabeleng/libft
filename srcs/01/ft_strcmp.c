@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 10:54:55 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/05/27 15:12:12 by mnchabel         ###   ########.fr       */
+/*   Created: 2019/05/27 11:00:52 by mnchabel          #+#    #+#             */
+/*   Updated: 2019/05/27 15:59:48 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/libft.h"
+#include "../../headers/libft.h"
 
-char	*ft_strstr(const char *haystack, const char *needle)
+int	ft_strcmp(const char *s1, const char *s2)
 {
 	size_t i;
-	size_t j;
 
-	i = 0;
-	if (needle[i])
-		return ((char *)haystack);
-	while (haystack[i])
+	if (s1 && s2)
 	{
-		j = 0;
-		while (haystack[i + j] == needle[j])
-		{
-			j++;
-			if (needle[j] == '\0')
-				return ((char *)haystack + i);
-		}
-		i++;
+		i = 0;
+		while (s1[i] && s2[i] && s1[i] == s2[i])
+			i++;
+		return (s1[i] - s2[i]);
 	}
-	return ((char *)0);
+	return (-1);
 }

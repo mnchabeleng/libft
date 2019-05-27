@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 11:33:01 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/05/27 14:48:55 by mnchabel         ###   ########.fr       */
+/*   Created: 2019/05/27 11:37:50 by mnchabel          #+#    #+#             */
+/*   Updated: 2019/05/27 16:02:39 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/libft.h"
+#include "../../headers/libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
-	unsigned char	*ft_s;
-	unsigned char	ft_c;
-	size_t			i;
+	size_t i;
 
-	ft_s = (unsigned char *)s;
-	ft_c = (unsigned char)c;
 	i = 0;
-	while (i < n)
+	while (i < n && src[i])
 	{
-		if (ft_s[i] == ft_c)
-			return (ft_s + i);
+		dest[i] = src[i];
 		i++;
 	}
-	return (0);
+	dest[i] = '\0';
+	return (dest);
 }

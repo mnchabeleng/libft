@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 11:28:48 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/05/27 14:45:36 by mnchabel         ###   ########.fr       */
+/*   Created: 2019/05/27 10:29:43 by mnchabel          #+#    #+#             */
+/*   Updated: 2019/05/27 16:00:10 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/libft.h"
+#include "../../headers/libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strcpy(char *dest, const char *src)
 {
-	unsigned char	*str;
-	size_t			i;
+	size_t i;
 
-	str = (unsigned char *)s;
 	i = 0;
-	while (i < n)
+	while (src[i])
 	{
-		str[i] = 0;
+		dest[i] = src[i];
 		i++;
 	}
+	dest[i] = '\0';
+	return (dest);
 }
