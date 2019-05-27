@@ -10,23 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	ft_pustr(const char *s)
+void	ft_putstr(const char *s)
 {
-	size_t i;
+	int i;
 
 	i = 0;
 	while (s[i])
-		write(1, s[i], 1);
-	return (0);
-}
-
-int	main(void)
-{
-	char *s = "Hello World!";
-
-	ft_putstr(s);
-	putchar('\n');
-	return (0);
+	{
+		write(1, &s[i], 1);
+		i++;
+	}
 }
