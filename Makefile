@@ -10,12 +10,12 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRC = srcs/01/ft_atoi.c srcs/01/ft_isalnum.c srcs/01/ft_isascii.c srcs/01/ft_isprint.c srcs/01/ft_memchr.c \
-	srcs/01/ft_memcpy.c srcs/01/ft_memset.c srcs/01/ft_strchr.c srcs/01/ft_strcpy.c srcs/01/ft_strlcat.c \
-	srcs/01/ft_strncat.c srcs/01/ft_strncpy.c srcs/01/ft_strrchr.c srcs/01/ft_tolower.c srcs/01/ft_bzero.c \
-	srcs/01/ft_isalpha.c srcs/01/ft_isdigit.c srcs/01/ft_memccpy.c srcs/01/ft_memcmp.c srcs/01/ft_memmove.c \
-	srcs/01/ft_strcat.c srcs/01/ft_strcmp.c srcs/01/ft_strdup.c srcs/01/ft_strlen.c srcs/01/ft_strncmp.c \
-	srcs/01/ft_strnstr.c srcs/01/ft_strstr.c srcs/01/ft_toupper.c
+SRC = ft_atoi.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_memchr.c \
+	ft_memcpy.c ft_memset.c ft_strchr.c ft_strcpy.c ft_strlcat.c \
+	ft_strncat.c ft_strncpy.c ft_strrchr.c ft_tolower.c ft_bzero.c \
+	ft_isalpha.c ft_isdigit.c ft_memccpy.c ft_memcmp.c ft_memmove.c \
+	ft_strcat.c ft_strcmp.c ft_strdup.c ft_strlen.c ft_strncmp.c \
+	ft_strnstr.c ft_strstr.c ft_toupper.c
 
 OUT = ft_atoi.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_memchr.o \
 	ft_memcpy.o ft_memset.o ft_strchr.o ft_strcpy.o ft_strlcat.o \
@@ -26,8 +26,10 @@ OUT = ft_atoi.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_memchr.o \
 
 LIB = libft.a
 
-all:
-	gcc -c -Wall -Werror -Wextra $(SRC)
+FLAGS = -Wall -Werror -Wextra
+
+all: 
+	gcc -c $(FLAGS) $(SRC)
 	ar -cvq $(LIB) $(OUT)
 
 clean:
