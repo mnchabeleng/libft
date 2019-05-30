@@ -28,7 +28,7 @@ LIB = libft.a
 
 FLAGS = -Wall -Werror -Wextra
 
-all: 
+all:
 	gcc -c $(FLAGS) $(SRC)
 	ar -cvq $(LIB) $(OUT)
 

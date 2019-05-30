@@ -10,12 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_digit(char chr)
-{
-	if (chr >= '0' && chr <= '9')
-		return (1);
-	return (0);
-}
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {
@@ -32,7 +27,7 @@ int	ft_atoi(const char *nptr)
 		sign = -1;
 	if (nptr[i] == '-' || nptr[i] == '+')
 		i++;
-	while (nptr[i] != '\0' && ft_is_digit(nptr[i]))
+	while (nptr[i] != '\0' && ft_isdigit(nptr[i]))
 	{
 		res = res * 10 + nptr[i] - '0';
 		i++;
