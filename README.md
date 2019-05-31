@@ -3,7 +3,8 @@
 #### Re-code a set of the libc functions, as defined in their man. Functions present the same prototype and behaviors as the originals. Function names are prefixed by “ft_”. For instance "strlen" becomes "ft_strlen".
 
 ### For testing
-- #### [Libftest](https://github.com/jtoty/Libftest)
+- #### [Libftest](https://github.com/jtoty/Libftest){target="_blank"}
+- #### [libft Unit tests](https://github.com/alelievr/libft-unit-test){target="_blank"}
 
 ### Part 1 - Libc functions ~ 28 functions
 
