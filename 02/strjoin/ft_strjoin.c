@@ -12,14 +12,37 @@ int     ft_strlen(const char *s)
     return (i);
 }
 
-char    *ft_strcpy()
+char    *ft_strcpy(char *dest, const char *src, size_t n)
 {
-    return (0);
+    size_t i;
+
+    i = 0;
+    while (src[i])
+    {
+        dest[i] = src[i];
+        i++;
+    }
+    dest[i] = '\0';
+    return (dest);
 }
 
-char    *ft_strcat()
+char	*ft_strcat(char *dest, const char *src)
 {
-    return (0);
+	unsigned char dest_len;
+	unsigned char i;
+
+	i = 0;
+	while (dest[i])
+		i++;
+	dest_len = i;
+	i = 0;
+	while (src[i])
+	{
+		dest[dest_len + i] = src[i];
+		i++;
+	}
+	dest[dest_len + i] = '\0';
+	return (dest);
 }
 
 char    *ft_strjoin(const char *s1, const char *s2)
@@ -27,13 +50,15 @@ char    *ft_strjoin(const char *s1, const char *s2)
     char    *ft_s;
     int     len;
 
-    if (!s1 || !s2)
-        return ("Life");
-    len = ft_strlen(s1) + ft_strlen(s2) + 1;
-    ft_s = (char *)malloc(sizeof(char) * len);
-    strcpy(ft_s, s1);
-    strcat(ft_s, s2);
-    return (ft_s);
+    if (*s1 != '\0' && *s2 != '\0')
+    {
+        len = ft_strlen(s1) + ft_strlen(s2) + 1;
+        ft_s = (char *)malloc(sizeof(char) * len);
+        ft_strcpy(ft_s, s1, ft_strlen(s1));
+        ft_strcat(ft_s, s2);
+        return (ft_s);
+    }
+    return (0);
 }
 
 int     main(void)
