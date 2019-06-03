@@ -6,7 +6,7 @@
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 15:45:13 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/06/03 15:55:08 by mnchabel         ###   ########.fr       */
+/*   Updated: 2019/06/03 16:48:17 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	{
 		len = ft_strlen(s1) + ft_strlen(s2) + 1;
 		ft_s = (char *)malloc(sizeof(char) * len);
+		if (!ft_s)
+			return (0);
 		ft_strcpy(ft_s, s1);
 		ft_strcat(ft_s, s2);
 		return (ft_s);

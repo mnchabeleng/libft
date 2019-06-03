@@ -39,7 +39,7 @@
 
 ### Part 2 - Additional functions ~ 24 functions
 
-- ft_memalloc
+- void		*ft_memalloc(size_t size);
 - ft_memdel
 - ft_strnew
 - ft_strdel

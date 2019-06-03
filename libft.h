@@ -6,7 +6,7 @@
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:39:29 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/05/27 15:36:42 by mnchabel         ###   ########.fr       */
+/*   Updated: 2019/06/03 16:03:50 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,8 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+void	*ft_memalloc(size_t size);
+char	*ft_strjoin(char const *s1, char const *s2);
+void	ft_putchar(char c);
+void	ft_putstr(char const *s);
 #endif
