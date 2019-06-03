@@ -59,7 +59,7 @@
 - void		ft_putstr(char const *s);
 - ft_putendl
 - ft_putnbr
-- ft_putchar_fd
+- void		ft_putchar_fd(char c, int fd);
 - ft_putstr_fd
 - ft_putendl_fd
 - ft_putnbr_fd
