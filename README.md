@@ -57,7 +57,7 @@
 - ft_itoa
 - void		ft_putchar(int c);
 - void		ft_putstr(char const *s);
-- ft_putendl
+- void		ft_putendl(char const *s);
 - ft_putnbr
 - void		ft_putchar_fd(char c, int fd);
 - void		ft_putstr_fd(char const *s, int fd);
