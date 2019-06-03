@@ -6,7 +6,7 @@
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:39:29 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/06/03 17:12:03 by mnchabel         ###   ########.fr       */
+/*   Updated: 2019/06/03 17:19:53 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,5 @@ char	*ft_strjoin(char const *s1, char const *s2);
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
 void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *s, int fd);
 #endif
