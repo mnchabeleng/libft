@@ -6,7 +6,7 @@
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:39:29 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/06/04 15:02:17 by mnchabel         ###   ########.fr       */
+/*   Updated: 2019/06/04 15:36:19 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
+char	*ft_strnew(size_t size);
 int		ft_strequ(char const *s1, char const *s2);
 char	*ft_strjoin(char const *s1, char const *s2);
 void	ft_putchar(char c);
