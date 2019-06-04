@@ -41,17 +41,17 @@
 
 - void		*ft_memalloc(size_t size);
 - void		ft_memdel(void **ap);
-- ft_strnew
-- ft_strdel
+- char		*ft_strnew(size_t size);
+- void		ft_strdel(char **as);
 - ft_strclr
 - ft_striter
 - ft_striteri
 - ft_strmap
 - ft_strmapi
-- ft_strequ
-- ft_strnequ
+- int		ft_strequ(char const *s1, char const *s2);
+- int		ft_strnequ(char const *s1, char const *s2, size_t n);
 - ft_strsub
-- ft_strjoin
+- char		*ft_strjoin(char const *s1, char const *s2);
 - ft_strtrim
 - ft_strsplit
 - ft_itoa
@@ -61,5 +61,5 @@
 - ft_putnbr
 - void		ft_putchar_fd(char c, int fd);
 - void		ft_putstr_fd(char const *s, int fd);
-- ft_putendl_fd
+- void		ft_putendl_fd(char const *s, int fd);
 - ft_putnbr_fd
