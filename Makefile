@@ -6,7 +6,7 @@
 #    By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/27 14:11:21 by mnchabel          #+#    #+#              #
-#    Updated: 2019/06/05 11:47:47 by mnchabel         ###   ########.fr        #
+#    Updated: 2019/06/06 11:25:43 by mnchabel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRC = ft_atoi.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_memchr.c \
 	ft_strnstr.c ft_strstr.c ft_toupper.c \
 	ft_memalloc.c ft_memdel.c ft_strnew.c ft_strdel.c ft_strequ.c \
 	ft_strnequ.c ft_strjoin.c ft_putchar.c ft_putstr.c ft_putendl.c \
-	ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c
+	ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
 OBJ = ft_atoi.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_memchr.o \
 	ft_memcpy.o ft_memset.o ft_strchr.o ft_strcpy.o ft_strlcat.o \
@@ -28,7 +28,7 @@ OBJ = ft_atoi.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_memchr.o \
 	ft_strnstr.o ft_strstr.o ft_toupper.o \
 	ft_memalloc.o ft_memdel.o ft_strnew.o ft_strdel.o ft_strequ.o \
 	ft_strnequ.o ft_strjoin.o ft_putchar.o ft_putstr.o ft_putendl.o \
-	ft_putnbr.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o
+	ft_putnbr.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o
 
 LIB = libft.a
 
