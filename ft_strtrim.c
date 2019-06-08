@@ -6,7 +6,7 @@
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 14:50:47 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/06/08 15:31:06 by mnchabel         ###   ########.fr       */
+/*   Updated: 2019/06/08 16:59:34 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,14 @@ char	*ft_strtrim(char const *s)
 	size_t	i;
 	size_t	j;
 
-	if (s)
-	{
-		i = 0;
-		j = ft_strlen(s);
-		while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
-			i++;
-		while (s[j] == ' ' || s[j] == '\n' || s[j] == '\t')
-			j--;
-		ft_s = ft_strsub(s, i, j);
-		return (ft_s);
-	}
-	return (0);
+	if (!s)
+		return (0);
+	i = 0;
+	j = ft_strlen(s);
+	while ((s[i] >= '\t' && s[i] <= '\r') || s[i] == 32)
+		i++;
+	while ((s[j - 1] >= '\t' && s[j - 1] <= '\r') || s[j - 1] == 32)
+		j--;
+	ft_s = ft_strsub(s, i, j);
+	return (ft_s);
 }
