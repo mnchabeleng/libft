@@ -43,23 +43,32 @@
 - void		ft_memdel(void **ap);
 - char		*ft_strnew(size_t size);
 - void		ft_strdel(char **as);
-- ft_strclr
-- ft_striter
-- ft_striteri
-- ft_strmap
-- ft_strmapi
+- void		ft_strclr(char *s);
+- void		ft_striter(char *s, void (*f)(char *));
+- void		ft_striteri(char *s, void (*f)(unsigned int, char *));
+- char		*ft_strmap(char const *s, char (*f)(char));
+- char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 - int		ft_strequ(char const *s1, char const *s2);
 - int		ft_strnequ(char const *s1, char const *s2, size_t n);
-- ft_strsub
+- char		*ft_strsub(char const *s, unsigned int start, size_t len);
 - char		*ft_strjoin(char const *s1, char const *s2);
-- ft_strtrim
-- ft_strsplit
-- ft_itoa
+- char		*ft_strtrim(char const *s);
+- char		**ft_strsplit(char const *s, char c);
+- char		*ft_itoa(int n);
 - void		ft_putchar(int c);
 - void		ft_putstr(char const *s);
 - void		ft_putendl(char const *s);
-- ft_putnbr
+- void		ft_putnbr(int n);
 - void		ft_putchar_fd(char c, int fd);
 - void		ft_putstr_fd(char const *s, int fd);
 - void		ft_putendl_fd(char const *s, int fd);
-- ft_putnbr_fd
+- void		ft_putnbr_fd(int n, int fd);
+
+### Bonus functions ~ 6 functions
+
+- ft_lstnew
+- ft_lstdelone
+- ft_lstdel
+- ft_lstadd
+- ft_lstiter
+- ft_lstmap
