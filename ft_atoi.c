@@ -6,7 +6,7 @@
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 11:28:34 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/05/27 13:15:29 by mnchabel         ###   ########.fr       */
+/*   Updated: 2019/06/11 12:28:15 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_atoi(const char *nptr)
 		sign = -1;
 	if (nptr[i] == '-' || nptr[i] == '+')
 		i++;
-	while (nptr[i] != '\0' && ft_isdigit(nptr[i]))
+	while (nptr[i] && ft_isdigit(nptr[i]))
 	{
 		res = res * 10 + nptr[i] - '0';
 		i++;
