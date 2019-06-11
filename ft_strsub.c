@@ -6,7 +6,7 @@
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 12:50:47 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/06/08 16:22:41 by mnchabel         ###   ########.fr       */
+/*   Updated: 2019/06/11 16:41:49 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	if (!s || start > ft_strlen(s))
 		return (0);
 	ft_s = ft_strnew(len);
+	if (!ft_s)
+		return (0);
 	i = 0;
 	while (s[start] && i < len)
 	{

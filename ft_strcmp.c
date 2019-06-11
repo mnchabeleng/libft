@@ -6,7 +6,7 @@
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 11:00:52 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/05/27 15:59:48 by mnchabel         ###   ########.fr       */
+/*   Updated: 2019/06/11 16:47:02 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ int	ft_strcmp(const char *s1, const char *s2)
 			i++;
 		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 	}
-	return (-1);
+	return (0);
 }
