@@ -6,12 +6,13 @@
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 13:46:17 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/06/11 15:45:10 by mnchabel         ###   ########.fr       */
+/*   Updated: 2019/06/12 12:01:11 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
 unsigned int	ft_word_count(char *s, char c)
 {
 	unsigned int	count;
@@ -47,3 +48,4 @@ char	**ft_strsplit(char const *s, char c)
 	j = 0;
 	k = 0;
 }
+*/
