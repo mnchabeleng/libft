@@ -16,7 +16,7 @@ void	ft_putstr(const char *s)
 {
 	int i;
 
-	if (!s)
+	if (s == 0)
 	{
 		ft_putstr("(null)");
 		return ;
