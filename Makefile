@@ -6,7 +6,7 @@
 #    By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/27 14:11:21 by mnchabel          #+#    #+#              #
-#    Updated: 2019/06/18 13:30:15 by mnchabel         ###   ########.fr        #
+#    Updated: 2019/06/19 15:19:35 by mnchabel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,9 +38,13 @@ LIB = libft.a
 
 FLAGS = -Wall -Werror -Wextra
 
+NAME = libft.a
+
 all:
 	gcc -c $(FLAGS) $(SRC)
 	ar -cvq $(LIB) $(OBJ)
+
+$(NAME): all
 
 clean:
 	rm -f $(OBJ)
