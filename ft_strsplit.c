@@ -6,7 +6,7 @@
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 13:46:17 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/06/15 12:25:44 by mnchabel         ###   ########.fr       */
+/*   Updated: 2019/06/18 15:56:46 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ char	**ft_strsplit(const char *s, char c)
 	size_t	j;
 	size_t	len;
 
-	ft_s = (char **)malloc(sizeof(char *) * (ft_strlen(s) + 1));
-	if (!ft_s)
+	if (!s || !(ft_s = (char **)malloc(sizeof(char *) * (ft_strlen(s) + 1))))
 		return (0);
 	i = 0;
 	j = 0;

@@ -6,7 +6,7 @@
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 11:31:32 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/05/27 15:56:04 by mnchabel         ###   ########.fr       */
+/*   Updated: 2019/06/18 14:36:17 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	unsigned char	*ft_src;
 	size_t			i;
 
-	if (dest == src || n <= 0)
-		return ((void *)dest);
+	if (dest == src)
+		return (dest);
 	ft_dest = (unsigned char *)dest;
 	ft_src = (unsigned char *)src;
 	i = 0;

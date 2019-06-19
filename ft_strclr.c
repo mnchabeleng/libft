@@ -6,7 +6,7 @@
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 14:25:09 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/06/06 14:43:51 by mnchabel         ###   ########.fr       */
+/*   Updated: 2019/06/18 15:39:42 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_strclr(char *s)
 {
-	ft_memset(s, '\0', ft_strlen(s));
+	if (s)
+		ft_memset(s, '\0', ft_strlen(s));
 }

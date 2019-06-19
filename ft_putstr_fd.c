@@ -6,7 +6,7 @@
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 17:14:54 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/06/03 17:20:51 by mnchabel         ###   ########.fr       */
+/*   Updated: 2019/06/18 16:17:49 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char const *s, int fd)
 {
 	size_t i;
 
+	if (!s || !fd)
+		return ;
 	i = 0;
 	while (s[i])
 	{
