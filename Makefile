@@ -6,7 +6,7 @@
 #    By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/27 14:11:21 by mnchabel          #+#    #+#              #
-#    Updated: 2019/06/20 16:07:52 by mnchabel         ###   ########.fr        #
+#    Updated: 2019/06/21 08:59:03 by mnchabel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,16 +40,16 @@ NAME = libft.a
 
 FLAGS = -Wall -Werror -Wextra
 
-all:
+all: $(NAME)
+
+$(NAME):
 	gcc -c $(FLAGS) $(SRC)
 	ar -cvq $(NAME) $(OBJ)
-
-$(NAME): all
 
 clean:
 	rm -f $(OBJ)
 
 fclean:
-	rm -f $(MAIN) $(NAME)
+	rm -f $(MAIN) $(NAME) $(OBJ)
 
 re: clean fclean all

@@ -5,6 +5,8 @@
 ### For testing
 - #### [Libftest](https://github.com/jtoty/Libftest)
 - #### [libft Unit tests](https://github.com/alelievr/libft-unit-test)
+- #### [42FileChecker](https://github.com/jgigault/42FileChecker)
+
 
 ### Part 1 - Libc functions ~ 28 functions
 
