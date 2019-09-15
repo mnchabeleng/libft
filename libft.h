@@ -6,13 +6,12 @@
 /*   By: mnchabel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:39:29 by mnchabel          #+#    #+#             */
-/*   Updated: 2019/06/20 16:26:09 by mnchabel         ###   ########.fr       */
+/*   Updated: 2019/09/15 14:40:59 by mnchabel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -24,7 +23,6 @@ typedef struct		s_list
 }					t_list;
 
 size_t				ft_itoa_len(int n);
-void				ft_print_list(t_list *list);
 
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_bzero(void *s, size_t n);

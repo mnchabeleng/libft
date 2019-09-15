@@ -14,13 +14,15 @@
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {
-	char			*ft_s;
-	unsigned int	len;
+	char	*ft_s;
+	size_t	len;
 
 	if (!s1 || !s2)
-		return (0);
+		return (NULL);
 	len = ft_strlen(s1) + ft_strlen(s2);
-	ft_s = (char *)malloc(sizeof(*ft_s) * len);
+	ft_s = (char *)malloc(sizeof(ft_s) * len);
+	if (!ft_s)
+		return (NULL);
 	if (ft_s)
 	{
 		ft_strcpy(ft_s, s1);
@@ -28,5 +30,5 @@ char	*ft_strjoin(const char *s1, const char *s2)
 		ft_s[len++] = '\0';
 		return (ft_s);
 	}
-	return (0);
+	return (ft_s);
 }

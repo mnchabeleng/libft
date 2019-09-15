@@ -14,19 +14,20 @@
 
 char	*ft_strncat(char *dest, const char *src, size_t n)
 {
-	size_t dest_len;
-	size_t i;
+	int		i;
+	size_t	j;
 
 	i = 0;
+	j = 0;
 	while (dest[i] != '\0')
-		i++;
-	dest_len = i;
-	i = 0;
-	while (i < n && src[i] != '\0')
 	{
-		dest[dest_len + i] = src[i];
 		i++;
 	}
-	dest[dest_len + i] = '\0';
+	while (n > j && src[j] != '\0')
+	{
+		dest[i + j] = src[j];
+		j++;
+	}
+	dest[i + j] = '\0';
 	return (dest);
 }

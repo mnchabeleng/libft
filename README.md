@@ -1,8 +1,15 @@
 # Libft.h
 
-#### Re-code a set of the libc functions, as defined in their man. Functions present the same prototype and behaviors as the originals. Function names are prefixed by “ft_”. For instance "strlen" becomes "ft_strlen".
+#### Libft is an individual project at Wethinkcode that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of functions to use in later projects. 
+
+### Running the program
+
+1. Download/Clone the source code
+2. CD to program folder
+3. Run command inside terminal : make
 
 ### For testing
+
 - #### [Libftest](https://github.com/jtoty/Libftest)
 - #### [libft Unit tests](https://github.com/alelievr/libft-unit-test)
 - #### [42FileChecker](https://github.com/jgigault/42FileChecker)
@@ -66,11 +73,6 @@
 - void		ft_putendl_fd(char const *s, int fd);
 - void		ft_putnbr_fd(int n, int fd);
 
-### Bonus functions ~ 6 functions
+### Bonus functions ~ 1 functions
 
-- ft_lstnew
-- ft_lstdelone
-- ft_lstdel
-- ft_lstadd
-- ft_lstiter
-- ft_lstmap
+t_list		*ft_lstnew(void const *content, size_t content_size);
