@@ -2,11 +2,11 @@
 
 #### Libft is an individual project at Wethinkcode that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of functions to use in later projects. 
 
-### Running the program
+### Running the program (From terminal)
 
-1. Download/Clone the source code
-2. CD to program folder
-3. Run command inside terminal : make
+1. git clone https://github.com/mnchabeleng/libft.git
+2. cd to project folder
+3. make
 
 ### For testing
 
