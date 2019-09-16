@@ -4,9 +4,9 @@
 
 ### Running the program (From terminal)
 
-> 1. git clone https://github.com/mnchabeleng/libft.git
-> 2. cd to project folder
-> 3. make
+1. git clone https://github.com/mnchabeleng/libft.git
+2. cd to project folder
+3. make
 
 ### For testing
 
